@@ -1,4 +1,4 @@
-![vap-logo](resources/images/vap-readme-logo.png)
+![vap-logo](resources/images/vap-logo2.png)
 Kubernetes Validation Admission Policy - local testing guide and valuable resources
 Disclaimer - supported from 1.26
 

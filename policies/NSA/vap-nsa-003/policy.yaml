@@ -6,7 +6,7 @@
 apiVersion: admissionregistration.k8s.io/v1alpha1
 kind: ValidatingAdmissionPolicy
 metadata:
-  name: "vap-0001-prevent-containers-from-accessing-host-files-by-using-high-uids"
+  name: "vap-nsa-003-prevent-containers-from-accessing-host-files-by-using-high-uids"
 spec:
   failurePolicy: Fail
   matchConstraints:

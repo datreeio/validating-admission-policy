@@ -31,6 +31,8 @@ minikube start --kubernetes-version=1.27.0-rc.0 --extra-config=apiserver.runtime
 ```
 This command specifies and enables the necessary Kubernetes version and feature gate to use VAPs in your cluster 🥳
 
+<br/>
+
 #### Download example files:
 To see some policy enforcement in action, there are 3 components we will need:
   * `ValidatingAdmissionPolicy` resource - this is where our rule logic will be defined.
@@ -39,19 +41,31 @@ To see some policy enforcement in action, there are 3 components we will need:
 
 We have created these components for you so you can quickly run it on your machine. Simply [download the latest release](latest) from this repo.
 
+<br/>
+
 #### Step by step!
 In your terminal, `cd` to the dir containing the example files, then:
 1. Apply the `ValidatingAdmissionPolicy` containing the rule logic
 ```
 kubectl apply -f ./vap.yaml
 ```
+This rule validates that the resource has at least 3 replicas.
 
-2. Apply the `ValidatingAdmissionPolicyBinding` containing the rule logic
+2. Apply the `ValidatingAdmissionPolicyBinding`
 ```
 kubectl apply -f ./vapBinding.yaml
 ```
+The binding specifies that all objects with the label `example: test` will be validated.
 
-### expected result img
+3. Apply the violating resource
+```
+kubectl apply -f ./exampleResource.yaml
+```
+This Deployment has only 2 replicas, and since it has the `example: test` label, it will be validated and denied by the VAP. 
+
+#### expected result img
+
+
 
 ## Useful links
 

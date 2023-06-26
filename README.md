@@ -31,6 +31,8 @@ minikube start --kubernetes-version=1.27.0-rc.0 --extra-config=apiserver.runtime
 ```
 This command specifies and enables the necessary Kubernetes version and feature gate to use VAPs in your cluster 🥳
 
+<br/>
+
 #### Download example files:
 To see some policy enforcement in action, there are 3 components we will need:
   * `ValidatingAdmissionPolicy` resource - this is where our rule logic will be defined.
@@ -38,6 +40,8 @@ To see some policy enforcement in action, there are 3 components we will need:
   * A resource manifest - an example YAML that violates our rule.
 
 We have created these components for you so you can quickly run it on your machine. Simply [download the latest release](latest) from this repo.
+
+<br/>
 
 #### Step by step!
 In your terminal, `cd` to the dir containing the example files, then:

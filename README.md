@@ -45,13 +45,23 @@ In your terminal, `cd` to the dir containing the example files, then:
 ```
 kubectl apply -f ./vap.yaml
 ```
+This rule validates that the resource has at least 3 replicas.
 
-2. Apply the `ValidatingAdmissionPolicyBinding` containing the rule logic
+2. Apply the `ValidatingAdmissionPolicyBinding`
 ```
 kubectl apply -f ./vapBinding.yaml
 ```
+The binding specifies that all objects with the label `example: test` will be validated.
 
-### expected result img
+3. Apply the violating resource
+```
+kubectl apply -f ./exampleResource.yaml
+```
+This Deployment has only 2 replicas, and since it has the `example: test` label, it will be validated and denied by the VAP. 
+
+#### expected result img
+
+
 
 ## Useful links
 

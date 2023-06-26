@@ -1,4 +1,4 @@
-# Validating Admission Policy 001
+# Validating Admission Policy
 # Name: Ensure each container has a read-only root filesystem
 # Docs: https://hub.datree.io/built-in-rules/ensure-read-only-filesystem
 # Severity: High

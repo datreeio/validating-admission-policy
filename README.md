@@ -36,7 +36,7 @@ This command specifies and enables the necessary Kubernetes version and feature 
 #### Download example files:
 To see some policy enforcement in action, there are 3 components we will need:
   * `ValidatingAdmissionPolicy` resource - this is where our rule logic will be defined.
-  * `ValidatingAdmissionPolicyBinding` resource - this is where we specify where and on which resources to run the validation. 
+  * `ValidatingAdmissionPolicyBinding` resource - a mandatory resource that specifies where and against which resources to run the validation. 
   * A resource manifest - an example YAML that violates our rule.
 
 We have created these components for you so you can quickly run it on your machine. Simply [download the latest release](https://github.com/datreeio/validating-admission-policy/releases/latest/download/exampleFiles.zip) from this repo.
@@ -65,8 +65,7 @@ This Deployment has only 1 replica, and since it has the `example: test` label, 
 
 ![deny-msg](/resources/images/example-deny-msg.png)
 
-
-
 ## Useful links
+* [Validating Admission Policy](https://kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy/) - Kubernetes documentation
 
 ## Troubleshooting

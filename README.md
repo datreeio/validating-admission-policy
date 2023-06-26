@@ -36,10 +36,10 @@ This command specifies and enables the necessary Kubernetes version and feature 
 #### Download example files:
 To see some policy enforcement in action, there are 3 components we will need:
   * `ValidatingAdmissionPolicy` resource - this is where our rule logic will be defined.
-  * `ValidatingAdmissionPolicyBinding` resource - this is where we specify where and on which resources to run the validation. 
+  * `ValidatingAdmissionPolicyBinding` resource - a mandatory resource that specifies where and against which resources to run the validation. 
   * A resource manifest - an example YAML that violates our rule.
 
-We have created these components for you so you can quickly run it on your machine. Simply [download the latest release](latest) from this repo.
+We have created these components for you so you can quickly run it on your machine. Simply [download the latest release](https://github.com/datreeio/validating-admission-policy/releases/latest/download/exampleFiles.zip) from this repo.
 
 <br/>
 
@@ -49,7 +49,7 @@ In your terminal, `cd` to the dir containing the example files, then:
 ```
 kubectl apply -f ./vap.yaml
 ```
-This rule validates that the resource has at least 3 replicas.
+This rule validates that the resource has at least 2 replicas.
 
 2. Apply the `ValidatingAdmissionPolicyBinding`
 ```
@@ -61,12 +61,11 @@ The binding specifies that all objects with the label `example: test` will be va
 ```
 kubectl apply -f ./exampleResource.yaml
 ```
-This Deployment has only 2 replicas, and since it has the `example: test` label, it will be validated and denied by the VAP. 
+This Deployment has only 1 replica, and since it has the `example: test` label, it will be validated and denied by the VAP. 
 
-#### expected result img
-
-
+![deny-msg](/resources/images/example-deny-msg.png)
 
 ## Useful links
+* [Validating Admission Policy](https://kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy/) - Kubernetes documentation
 
-
+## Troubleshooting

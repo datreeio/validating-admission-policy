@@ -63,7 +63,7 @@ kubectl apply -f ./exampleResource.yaml
 ```
 This Deployment has only 1 replica, and since it has the `example: test` label, it will be validated and denied by the VAP. 
 
-#### expected result img
+![deny-msg](/resources/images/example-deny-msg.png)
 
 
 

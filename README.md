@@ -39,7 +39,7 @@ To see some policy enforcement in action, there are 3 components we will need:
   * `ValidatingAdmissionPolicyBinding` resource - this is where we specify where and on which resources to run the validation. 
   * A resource manifest - an example YAML that violates our rule.
 
-We have created these components for you so you can quickly run it on your machine. Simply [download the latest release](latest) from this repo.
+We have created these components for you so you can quickly run it on your machine. Simply [download the latest release](https://github.com/datreeio/validating-admission-policy/releases/latest/download/exampleFiles.zip) from this repo.
 
 <br/>
 

@@ -1,10 +1,10 @@
 ![vap-logo](resources/images/vap-logo2.png)
 
 ## What will you find in this repo?
-* [What is a Validating admission policy?](#what-is-validating-admission-policy-vap)
-* [What is the Common expression language (CEL)?](#what-is-common-expression-language-cel)
-* Local testing - step-by-step guide
-* Useful links
+* [What is a Validating admission policy?](#what-is-a-validating-admission-policy-vap)
+* [What is the Common expression language (CEL)?](#what-is-the-common-expression-language-cel)
+* [Local testing - step-by-step guide](#local-testingplayground)
+* [Useful links](#useful-links)
 
 ## What is a Validating admission policy (VAP)?
 Starting with version `1.26`, Kubernetes provides a new resource kind named `ValidatingAdmissionPolicy`, which offers a declarative, in-process alternative to validating admission webhooks.  

@@ -8,7 +8,7 @@
 
 ## What is a Validating admission policy (VAP)?
 Starting with version `1.26`, Kubernetes provides a new resource kind named `ValidatingAdmissionPolicy`, which offers a declarative, in-process alternative to validating admission webhooks.  
-Read more about it [here](https://datree.slack.com/archives/D02S4JK41QD/p1687703168120579).
+Read more about it [here](https://kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy/).
 
 ## What is the Common expression language (CEL)?
 CEL is an an open-source language created by Google that implements common semantics for expression evaluation.

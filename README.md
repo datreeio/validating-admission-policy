@@ -12,7 +12,7 @@ Read more about it [here](https://datree.slack.com/archives/D02S4JK41QD/p1687703
 
 ## What is the Common expression language (CEL)?
 CEL is an an open-source language created by Google that implements common semantics for expression evaluation.
-In the world of Kubernetes, CEL is used within ValidationAdmissionPolicies to declare validation rules and enforce them on a cluster.
+In the world of Kubernetes, CEL is used within ValidatingAdmissionPolicy to declare validation rules and enforce them on a cluster.
 
 ## Local testing/playground
 ### Prerequisites

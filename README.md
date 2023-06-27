@@ -30,7 +30,7 @@ If you're not using `brew`, see the [Minikube docs](https://minikube.sigs.k8s.io
 > :warning: **Kubernetes version support**: To ensure that your Minikube supports the required Kubernetes version (1.27.0-rc.0), run the command `minikube config defaults kubernetes-version` and look for it in the output
 
 ### Instructions
-#### Start up your VAP-supported cluster
+#### 1. Start up your VAP-supported cluster
 Run the following command:
 ```
 minikube start --kubernetes-version=1.27.0-rc.0 --extra-config=apiserver.runtime-config=admissionregistration.k8s.io/v1alpha1  --feature-gates='ValidatingAdmissionPolicy=true'
@@ -39,7 +39,7 @@ This command specifies and enables the necessary Kubernetes version and feature 
 
 <br/>
 
-#### Download example files:
+#### 2. Download example files:
 To see some policy enforcement in action, there are 3 components we will need:
   * `ValidatingAdmissionPolicy` resource - this is where our rule logic will be defined.
   * `ValidatingAdmissionPolicyBinding` resource - a mandatory resource that specifies where and against which resources to run the validation. 
@@ -49,7 +49,7 @@ We have created these components for you so you can quickly run it on your machi
 
 <br/>
 
-#### Step by step!
+#### 3. Apply the resources and see the enforcement in action
 In your terminal, `cd` to the dir containing the example files, then:
 1. Apply the `ValidatingAdmissionPolicy` containing the rule logic
 ```
@@ -73,5 +73,4 @@ This Deployment has only 1 replica, and since it has the `example: test` label, 
 
 ## Useful links
 * [Validating Admission Policy](https://kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy/) - Kubernetes documentation
-
-## Troubleshooting
+* [Common Expression Language specification](https://github.com/google/cel-spec)

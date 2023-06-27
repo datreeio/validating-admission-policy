@@ -1,14 +1,12 @@
 ![vap-logo](resources/images/vap-logo2.png)
-Kubernetes Validation Admission Policy - local testing guide and valuable resources
-Disclaimer - supported from 1.26
 
 ## What is Validating admission policy (VAP)?
 Starting with version `1.26`, Kubernetes provides a new resource kind named `ValidatingAdmissionPolicy`, which offers a declarative, in-process alternative to validating admission webhooks.  
 Read more about it [here](https://datree.slack.com/archives/D02S4JK41QD/p1687703168120579).
 
 ## What is Common expression language (CEL)?
-CEL is an an open-source language that implements common semantics for expression evaluation.
-In the world of Kubernetes, CEL is used within VAPs to declare validation rules and enforce them on a cluster.
+CEL is an an open-source language created by Google that implements common semantics for expression evaluation.
+In the world of Kubernetes, CEL is used within ValidationAdmissionPolicies to declare validation rules and enforce them on a cluster.
 
 ## Testing/playground local
 ### Prerequisites

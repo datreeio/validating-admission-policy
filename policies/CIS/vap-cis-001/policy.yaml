@@ -24,9 +24,9 @@ spec:
         operations: ["CREATE", "UPDATE"]
         resources: ["jobs", "cronjobs"]
   validations:
-    - expression: "object.kind != 'Pod' || object.spec.containers.all(container, has(container.securityContext)"
+    - expression: "object.kind != 'Pod' || object.spec.containers.all(container, has(container.securityContext))"
       message: "Missing key `securityContext` - set to enforce your containers' security and stability. (see more at https://hub.datree.io/built-in-rules/ensure-containers-pods-security-context)"
-    - expression: "['Deployment','ReplicaSet','DaemonSet','StatefulSet','Job'].all(kind, object.kind != kind) || object.spec.template.spec.containers.all(container, has(container.securityContext)"
+    - expression: "['Deployment','ReplicaSet','DaemonSet','StatefulSet','Job'].all(kind, object.kind != kind) || object.spec.template.spec.containers.all(container, has(container.securityContext))"
       message: "Missing key `securityContext` - set to enforce your containers' security and stability. (see more at https://hub.datree.io/built-in-rules/ensure-containers-pods-security-context)"
-    - expression: "object.kind != 'CronJob' || object.spec.jobTemplate.spec.template.spec.containers.all(container, has(container.securityContext)"
+    - expression: "object.kind != 'CronJob' || object.spec.jobTemplate.spec.template.spec.containers.all(container, has(container.securityContext))"
       message: "Missing key `securityContext` - set to enforce your containers' security and stability. (see more at https://hub.datree.io/built-in-rules/ensure-containers-pods-security-context)"

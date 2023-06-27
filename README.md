@@ -12,7 +12,7 @@ Read more about it [here](https://datree.slack.com/archives/D02S4JK41QD/p1687703
 
 ## What is the Common expression language (CEL)?
 CEL is an an open-source language created by Google that implements common semantics for expression evaluation.
-In the world of Kubernetes, CEL is used within ValidationAdmissionPolicies to declare validation rules and enforce them on a cluster.
+In the world of Kubernetes, CEL is used within the ValidationAdmissionPolicy resource to declare validation rules and enforce them on a cluster.
 
 ## Local testing/playground
 ### Prerequisites
@@ -26,6 +26,8 @@ If Minikube is already installed, upgrade it to the latest version:
 brew upgrade minikube
 ```
 If you're not using `brew`, see the [Minikube docs](https://minikube.sigs.k8s.io/docs/start/) for other ways to install/upgrade.
+
+> :warning: **Kubernetes version support**: To ensure that your Minikube supports the required Kubernetes version (1.27.0-rc.0), run the command `minikube config defaults kubernetes-version` and look for it in the output
 
 ### Instructions
 #### Start up your VAP-supported cluster

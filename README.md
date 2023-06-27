@@ -73,4 +73,5 @@ This Deployment has only 1 replica, and since it has the `example: test` label, 
 
 ## Useful links
 * [Validating Admission Policy](https://kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy/) - Kubernetes documentation
-* [Common Expression Language specification](https://github.com/google/cel-spec)
+* [CEL specification](https://github.com/google/cel-spec) - Common Expression Language specification
+* [CEL awesome list](https://github.com/datreeio/awesome-cel) - An over-engineered repository with many useful CEL-related resources 
